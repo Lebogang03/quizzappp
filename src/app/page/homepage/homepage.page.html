@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+
+        <ion-title>QuizApp</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <video autoplay muted loop id="vid">
+                <source src="/assets/firstv.mp4" type="video/mp4">
+    </video>
+
+
+
+    <div>
+        <ion-item color="tertiary">
+
+            <p>
+
+                <br> This quizz has three different categories to select from Sport,Music or General Knowledge.
+
+
+
+            </p>
+        </ion-item>
+
+
+        <!-- <ion-item class="container">
+            <ion-label position="floating">FirstName</ion-label>
+            <ion-input type="text" name=FirstName [(ngModel)]="FirstName"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">LastName</ion-label>
+            <ion-input type="text" name=LastName [(ngModel)]="LastName"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">date</ion-label>
+            <ion-input></ion-input>
+            <ion-input type="Date" name=date [(ngModel)]="date"></ion-input>
+
+        </ion-item> -->
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <ion-button (click)="sport()" class="butt1" expand="full" fill="outline" color="tertiary-shade"><b><i>Sport</i></b></ion-button>
+    <ion-button (click)="secondQuizz()" class="butt2" expand="full" fill="outline"><b><i>Music</i></b></ion-button>
+    <ion-button (click)="thirdQuiz()" class="butt3" expand="full" fill="outline"><b><i>General knowledge</i></b></ion-button>
+
+</ion-content>

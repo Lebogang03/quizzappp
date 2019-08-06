@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Results</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <ion-card>
+        <img src="/assets/b2.jpg">
+
+    </ion-card>
+    <P>{{FirstName}}</P>
+
+    <P>{{LastName}}</P>
+    <p>{{date| date:'dd-MM-yyyy'}}</p>
+    <p>your total Score is</p>
+    <p>{{score1}}</p>
+    <p>{{score2}}</p>
+    <p>{{score3}}</p>
+
+
+
+    <ion-button (click)="homepage()" class="butt1" expand="full" fill="outline" color="tertiary-shade"><b><i>   Homepage</i></b></ion-button>
+
+</ion-content>

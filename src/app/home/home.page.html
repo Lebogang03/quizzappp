@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-toolbar color="">
+        <ion-title>
+            Sport Quiz
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <video autoplay muted loop id="vid">
+                <source src="/assets/blue.mp4" type="video/mp4">
+    </video>
+
+    <ion-card>
+        <img src="/assets/slide1.png">
+
+    </ion-card>
+
+    <P>{{FirstName}}</P>
+    <P>{{LastName}}</P>
+    <p>{{date}}</p>
+
+
+
+
+
+
+    <ion-slides #slides>
+        <ion-slide *ngFor="let quest of time ; let i = index ">
+            <ion-list color="dark">
+
+
+                <p style="background-color:transparent;">{{i+1}}. {{quest.question}}</p>
+
+                <p>
+                    {{quest.correct_answer}}
+
+                    <ion-radio (click)="select1()" slot="start" value="biff"></ion-radio>
+                </p>
+                <p>
+                    <ion-label> {{quest.incorrect_answers}}</ion-label>
+                    <ion-radio (click)="select2()" slot="start" value="griff"></ion-radio>
+                </p>
+
+            </ion-list>
+
+        </ion-slide>
+
+        <ion-slide>
+            <p> Please click on Submit <br> to view your results</p>
+        </ion-slide>
+
+
+
+    </ion-slides>
+
+
+
+    <ion-button (click)="submit()" class="sports" expand="full" fill="outline"><b><i>Submit</i></b></ion-button>
+
+
+
+
+</ion-content>

@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-title>General Knowledge Quiz</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+    <ion-card>
+        <img src="/assets/nn.jpg">
+
+
+    </ion-card>
+
+    <P>{{FirstName}}</P>
+
+    <P>{{LastName}}</P>
+
+    <P>{{Email}}</P>
+
+    <ion-card>
+
+        <ion-slides #slides>
+            <ion-slide *ngFor="let thirdq of first ; let y = index ">
+                <ion-list>
+                    <ion-item>
+
+                    </ion-item>
+                    <ion-item>
+                        <p>{{y+1}}. {{thirdq.question}}</p>
+                    </ion-item>
+
+
+
+
+                    <ion-item>
+                        <ion-label>
+                            {{thirdq.correct_answer}}
+                        </ion-label>
+                        <ion-radio (click)="thirdquiz1()" slot="start" value="biff"></ion-radio>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label> {{thirdq.incorrect_answers}}</ion-label>
+                        <ion-radio (click)="thirdquiz2()" slot="start" value="griff"></ion-radio>
+                    </ion-item>
+
+
+
+                </ion-list>
+
+            </ion-slide>
+
+            <ion-slide>
+
+            </ion-slide>
+        </ion-slides>
+
+    </ion-card>
+
+    <ion-button (click)="thirdquiz()" class="gn">Submit</ion-button>
+
+
+
+
+</ion-content>
