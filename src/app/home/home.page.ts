@@ -37,9 +37,9 @@ correct:boolean;
     
   }
 
-  nextSlide(){
-    this.slides.slideNext()
-  }
+  // nextSlide(){
+  //   this.slides.slideNext()
+  // }
   
 
   submit()
@@ -52,21 +52,21 @@ correct:boolean;
 select1(){  
   console.log(this.score1 +=1)
 if(this.hasanswared=true){
-  this.nextSlide();
+  // this.nextSlide();
 }
 }
 
 select2(){ 
   console.log(this.score1 +=0)
   if(this.hasanswared=true){
-    this.nextSlide();
+    // this.nextSlide();
   }
 }
 
 select3(){  
   console.log(this.score1 +=0)
   if(this.hasanswared=true){
-    this.nextSlide();
+    // this.nextSlide();
   }
 
 }
@@ -74,7 +74,7 @@ select3(){
 select4(){
   console.log(this.score1 +=0)
   if(this.hasanswared=true){
-    this.nextSlide();
+    // this.nextSlide();
   }
 }
 

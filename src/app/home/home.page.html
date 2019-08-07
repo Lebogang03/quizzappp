@@ -8,11 +8,11 @@
 
 <ion-content>
 
-    <video autoplay muted loop id="vid">
+    <!-- <video autoplay muted loop id="vid">
                 <source src="/assets/blue.mp4" type="video/mp4">
-    </video>
+    </video> -->
 
-    <ion-card>
+    <ion-card color="warning">
         <img src="/assets/slide1.png">
 
     </ion-card>
@@ -26,34 +26,44 @@
 
 
 
-    <ion-slides #slides>
-        <ion-slide *ngFor="let quest of time ; let i = index ">
+    <ion-card>
+        <div *ngFor="let quest of time ; let i = index ">
             <ion-list color="dark">
 
 
                 <p style="background-color:transparent;">{{i+1}}. {{quest.question}}</p>
 
                 <p>
-                    {{quest.correct_answer}}
 
+                    {{quest.incorrect_answers[0]}}
+                    <ion-radio (click)="select1()" slot="start" value="biff"></ion-radio>
+                </p>
+
+                <p>
+
+                    {{quest.incorrect_answers[1]}}
                     <ion-radio (click)="select1()" slot="start" value="biff"></ion-radio>
                 </p>
                 <p>
-                    <ion-label> {{quest.incorrect_answers}}</ion-label>
+
+                    {{quest.incorrect_answers[2]}}
+                    <ion-radio (click)="select1()" slot="start" value="biff"></ion-radio>
+                </p>
+                <p>
+                    <ion-label>{{quest.correct_answer}} </ion-label>
                     <ion-radio (click)="select2()" slot="start" value="griff"></ion-radio>
                 </p>
 
             </ion-list>
+        </div>
 
-        </ion-slide>
-
-        <ion-slide>
-            <p> Please click on Submit <br> to view your results</p>
-        </ion-slide>
+    </ion-card>
 
 
 
-    </ion-slides>
+
+
+
 
 
 

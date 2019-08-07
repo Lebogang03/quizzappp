@@ -1,10 +1,10 @@
 <ion-header>
-    <ion-toolbar color="dark">
+    <ion-toolbar>
         <ion-title>General Knowledge Quiz</ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark">
+<ion-content>
 
     <ion-card>
         <img src="/assets/nn.jpg">
@@ -12,49 +12,50 @@
 
     </ion-card>
 
-    <P>{{FirstName}}</P>
-
-    <P>{{LastName}}</P>
-
-    <P>{{Email}}</P>
 
     <ion-card>
 
-        <ion-slides #slides>
-            <ion-slide *ngFor="let thirdq of first ; let y = index ">
-                <ion-list>
-                    <ion-item>
 
-                    </ion-item>
-                    <ion-item>
-                        <p>{{y+1}}. {{thirdq.question}}</p>
-                    </ion-item>
+        <div *ngFor="let thirdq of first ; let y = index ">
+            <ion-list>
+
+                <p>{{y+1}}. {{thirdq.question}}</p>
 
 
 
+                <p>
+                    <ion-label> {{thirdq.incorrect_answers[0]}}</ion-label>
+                    <ion-radio (click)="thirdquiz2()" slot="start" value="griff"></ion-radio>
 
-                    <ion-item>
-                        <ion-label>
-                            {{thirdq.correct_answer}}
-                        </ion-label>
-                        <ion-radio (click)="thirdquiz1()" slot="start" value="biff"></ion-radio>
-                    </ion-item>
+                </p>
 
-                    <ion-item>
-                        <ion-label> {{thirdq.incorrect_answers}}</ion-label>
-                        <ion-radio (click)="thirdquiz2()" slot="start" value="griff"></ion-radio>
-                    </ion-item>
+                <p>
+                    <ion-label> {{thirdq.incorrect_answers[1]}}</ion-label>
+                    <ion-radio (click)="thirdquiz2()" slot="start" value="griff"></ion-radio>
 
+                </p>
 
 
-                </ion-list>
 
-            </ion-slide>
 
-            <ion-slide>
+                <p>
+                    <ion-label>
+                        {{thirdq.correct_answer}}
+                    </ion-label>
+                    <ion-radio (click)="thirdquiz1()" slot="start" value="biff"></ion-radio>
+                </p>
 
-            </ion-slide>
-        </ion-slides>
+                <p>
+                    <ion-label> {{thirdq.incorrect_answers[2]}}</ion-label>
+                    <ion-radio (click)="thirdquiz2()" slot="start" value="griff"></ion-radio>
+
+                </p>
+
+
+            </ion-list>
+
+
+        </div>
 
     </ion-card>
 

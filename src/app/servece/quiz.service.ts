@@ -10,16 +10,16 @@ export class QuizService {
 
   getQuiz()
   {
-    return this.quize.get('https://opentdb.com/api.php?amount=6&category=21&difficulty=medium&type=boolean');
+    return this.quize.get('https://opentdb.com/api.php?amount=10&category=21&difficulty=medium&type=multiple');
   }
 
   secquiz()
   {
-    return this.quize.get('https://opentdb.com/api.php?amount=5&category=12&difficulty=easy&type=boolean');
+    return this.quize.get('https://opentdb.com/api.php?amount=10&type=multiple');
   }
 
   thirdquiz()
   {
-    return this.quize.get('https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=boolean');
+    return this.quize.get('https://opentdb.com/api.php?amount=10&category=9&type=multiple');
   }
 }
