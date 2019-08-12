@@ -14,9 +14,53 @@
 
 
     <ion-card>
+        <div *ngFor="let secquizz of second ; let x = index  ">
 
 
-        <div *ngFor="let secquizz of second ; let x = index ">
+            <p>{{i+1}}. {{secquizz.question}}</p>
+
+            <ion-radio-group>
+                <ion-list>
+
+                    <p>
+
+                        <ion-label> {{secquizz.incorrect_answers[0]}}</ion-label>
+                        <ion-radio (click)="secquiz2()" value="correct1"></ion-radio>
+
+                    </p>
+
+                    <p>
+                        <ion-label> {{secquizz.incorrect_answers[1]}}</ion-label>
+                        <ion-radio (click)="secquiz2()" value="correct2"></ion-radio>
+
+                    </p>
+
+
+
+
+                    <p>
+                        <ion-label>
+                            {{secquizz.correct_answer}}
+                        </ion-label>
+                        <ion-radio (click)="secquiz1()" value="biff" value="correct1"></ion-radio>
+                    </p>
+
+                    <p>
+                        <ion-label> {{secquizz.incorrect_answers[2]}}</ion-label>
+                        <ion-radio (click)="secquiz2()" value="griff" value="correct3"></ion-radio>
+
+                    </p>
+
+
+                </ion-list>
+            </ion-radio-group>
+
+        </div>
+
+
+
+
+        <!-- <div *ngFor="let secquizz of second ; let x = index ">
             <ion-list>
 
                 <p>{{x+1}}. {{secquizz.question}}</p>
@@ -49,7 +93,7 @@
             </ion-list>
 
 
-        </div>
+        </div> -->
 
     </ion-card>
 

@@ -20,10 +20,11 @@ hasanswared:boolean=false;
 correct:boolean;
 
 
-@Input() FirstName;
-@Input() LastName;
-@Input() Email;
-@Input() date;
+public form = [
+  { value: 'correct1', isChecked: true },
+  { value: 'correct2', isChecked: false },
+  { value: 'correct3', isChecked: false }
+];
 
 
   constructor(private service:QuizService,private router:Router,private queryrouter:ActivatedRoute) {
@@ -44,20 +45,20 @@ correct:boolean;
 
   submit()
 {
-  console.log(this.score1,this.FirstName,this.LastName,this.Email,this.date); 
-  this.router.navigate(['/results'], { queryParams: {score1:this.score1,FirstName:this.FirstName,LastName:this.LastName,Email:this.Email,date:this.date}});
+  
+  this.router.navigate(['/results'], { queryParams: {score1:this.score1}});
   
 }
 
 select1(){  
-  console.log(this.score1 +=1)
+  console.log(this.score1 +=0)
 if(this.hasanswared=true){
   // this.nextSlide();
 }
 }
 
 select2(){ 
-  console.log(this.score1 +=0)
+  console.log(this.score1 +=1)
   if(this.hasanswared=true){
     // this.nextSlide();
   }
@@ -89,16 +90,8 @@ ngOnInit() {
 
  
 
-    this.queryrouter.queryParams
-    .subscribe(params => {
-      console.log(params); 
-      this.FirstName= params.FirstName,
-      this.LastName= params.LastName,
-      this.Email= params.Email;
-      this.date= params.date;
-      console.log(this.FirstName,this.LastName,this.Email,this.date);
-    });
-
+  
+   
 
 }
 

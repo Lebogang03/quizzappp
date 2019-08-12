@@ -31,9 +31,9 @@ display;
     
    }
 
-   nextSlide(){
-    this.slides.slideNext()
-  }
+  //  nextSlide(){
+  //   this.slides.slideNext()
+  // }
   
 
 
@@ -54,7 +54,7 @@ display;
   secquiz1(){  
     console.log(this.score2 +=1)
     if(this.hasanswared=true){
-      this.nextSlide();
+      // this.nextSlide();
     }
     
     }
@@ -62,7 +62,7 @@ display;
     secquiz2(){ 
     console.log(this.score2 +=0)
     if(this.hasanswared=true){
-      this.nextSlide();
+      // this.nextSlide();
     }
  
 }

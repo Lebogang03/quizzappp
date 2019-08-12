@@ -11,7 +11,7 @@ export class ThirdqiuzPage implements OnInit {
 
 info
 first
-@ViewChild('slides')slides:any;
+
 score3=0;
 answer;
 
@@ -19,6 +19,7 @@ FirstName;
 LastName;
 date;
 hasanswared;
+question1;
 
   constructor(private router:Router,private ser:QuizService,private queryrouter:ActivatedRoute) {
 
@@ -32,27 +33,18 @@ this.first=this.info.results;
 
    }
 
-   nextSlide(){
-    this.slides.slideNext()
-  }
+  //  nextSlide(){
+  //   this.slides.slideNext()
+  // }
   
-  ngOnInit() {
-
-    this.queryrouter.queryParams
-    .subscribe(params => {
-      console.log(params); 
-      this.FirstName= params.FirstName,
-      this.LastName= params.LastName,
-      this.date= params.date;
-      console.log(this.FirstName,this.LastName,this.date);
-    });
-     
+  ngOnInit() {  
+   
   }
 
   thirdquiz1(){  
     console.log(this.score3 +=1)
     if(this.hasanswared=true){
-      this.nextSlide();
+      
     }
     
     }

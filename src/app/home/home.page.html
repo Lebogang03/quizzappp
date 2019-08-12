@@ -17,16 +17,55 @@
 
     </ion-card>
 
-    <P>{{FirstName}}</P>
-    <P>{{LastName}}</P>
-    <p>{{date}}</p>
+
+    <div *ngFor="let quest of time  ; let i = index ">
+
+
+        <p>{{i+1}}. {{quest.question}}</p>
+
+        <ion-radio-group>
+            <ion-list>
+
+                <p>
+
+                    <ion-label> {{quest.incorrect_answers[0]}}</ion-label>
+                    <ion-radio (click)="select1()" value="correct1"></ion-radio>
+
+                </p>
+
+                <p>
+                    <ion-label> {{quest.incorrect_answers[1]}}</ion-label>
+                    <ion-radio (click)="select3()" value="correct2"></ion-radio>
+
+                </p>
+
+
+
+
+                <p>
+                    <ion-label>
+                        {{quest.correct_answer}}
+                    </ion-label>
+                    <ion-radio (click)="select2()" value="biff" value="correct1"></ion-radio>
+                </p>
+
+                <p>
+                    <ion-label> {{quest.incorrect_answers[2]}}</ion-label>
+                    <ion-radio (click)="select4()" value="griff" value="correct3"></ion-radio>
+
+                </p>
+
+
+            </ion-list>
+        </ion-radio-group>
+
+    </div>
 
 
 
 
 
-
-    <ion-card>
+    <!-- <ion-card>
         <div *ngFor="let quest of time ; let i = index ">
             <ion-list color="dark">
 
@@ -57,7 +96,7 @@
             </ion-list>
         </div>
 
-    </ion-card>
+    </ion-card> -->
 
 
 
